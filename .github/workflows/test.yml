@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
   pull_request:
+  workflow_call:
 
 permissions:
   contents: read
@@ -18,6 +19,12 @@ jobs:
         os: [macos-latest, ubuntu-latest]
     steps:
       - uses: Homebrew/actions/setup-homebrew@main
+      - name: Use the newest formula on main
+        if: github.event_name != 'pull_request'
+        run: |
+          tap="$(brew --repository jatinkrmalik/ccam)"
+          git -C "$tap" fetch -q origin main
+          git -C "$tap" checkout -q FETCH_HEAD
       - name: Install
         run: brew install jatinkrmalik/ccam/ccam
       - name: Test
