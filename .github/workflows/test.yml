@@ -1,0 +1,26 @@
+name: Test formula
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: brew install (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@master
+      - name: Install
+        run: brew install jatinkrmalik/ccam/ccam
+      - name: Test
+        run: |
+          brew test jatinkrmalik/ccam/ccam
+          ccam --version
