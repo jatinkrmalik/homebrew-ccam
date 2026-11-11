@@ -17,7 +17,7 @@ jobs:
       matrix:
         os: [macos-latest, ubuntu-latest]
     steps:
-      - uses: Homebrew/actions/setup-homebrew@master
+      - uses: Homebrew/actions/setup-homebrew@main
       - name: Install
         run: brew install jatinkrmalik/ccam/ccam
       - name: Test
