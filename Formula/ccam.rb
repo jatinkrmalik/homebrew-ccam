@@ -1,24 +1,24 @@
 class Ccam < Formula
   desc "Switch between multiple Claude Code accounts on one machine"
   homepage "https://github.com/jatinkrmalik/ccam"
-  version "0.4.0"
+  version "0.4.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/jatinkrmalik/ccam/releases/download/v0.4.0/ccam-v0.4.0-aarch64-apple-darwin.tar.gz"
-      sha256 "53bf84f3fa6b294b5aa45ae010057b45578d9ea73db7bd4e5077a4cc41dac2ab"
+      url "https://github.com/jatinkrmalik/ccam/releases/download/v0.4.1/ccam-v0.4.1-aarch64-apple-darwin.tar.gz"
+      sha256 "9ffce7dbe2bd17982bae15f03393bf52b2eb0158726831235aba69b9650b3a40"
     end
     on_intel do
-      url "https://github.com/jatinkrmalik/ccam/releases/download/v0.4.0/ccam-v0.4.0-x86_64-apple-darwin.tar.gz"
-      sha256 "11119de97d4ec76a13255d6fd4d1c4f1c134ea909b34129cf53f05911acef952"
+      url "https://github.com/jatinkrmalik/ccam/releases/download/v0.4.1/ccam-v0.4.1-x86_64-apple-darwin.tar.gz"
+      sha256 "4255204f3aca54a5077bc3e18c01f586af5e444e29ff57f8677a5ca445f5f7e9"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/jatinkrmalik/ccam/releases/download/v0.4.0/ccam-v0.4.0-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "3564d1d998cb233778fe16d06800b0d08170b86e2a30e8b230c7f7988cfe5d21"
+      url "https://github.com/jatinkrmalik/ccam/releases/download/v0.4.1/ccam-v0.4.1-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "a9f780eba8a0067395f81baf76cf297c07ecf50a9f0a098a2769312f773cc4cb"
     end
   end
 
